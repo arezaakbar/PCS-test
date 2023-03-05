@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">PCS</string>
+    <string name="event1">Your submission "Lorem Ipsum Dolor Sit Amet" with the total cost of 50.000 has been paid, please check your BRIMO application, thank you.</string>
+    <string name="event2">Your submission "description" has been rejected, please click for details.</string>
+    <string name="event3">Your submission will be processed according to the reimbursement schedule. Please wait.</string>
+    <string name="event4">Your submission has been approved by the Superior.</string>
+    <string name="event5">Your submission has been rejected, please confirm with your Superior.</string>
+    <string name="event6">Your submission is being reviewed to the Superior for the approval process.</string>
+    <string name="event7">Your submission has been approved by the Superior.</string>
+    <string name="event8">Your submission has been rejected, please confirm with your Superior.</string>
+</resources>

@@ -1,0 +1,737 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bannerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="20dp"
+        android:clipToPadding="false"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/parentLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="10dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/greetings">
+
+            <TextView
+                android:id="@+id/KerjaYuk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="KerjaYuk!"
+                android:textSize="20dp"
+                android:textColor="@color/primary_dark"
+                android:fontFamily="@font/free_sans_bold"
+                app:layout_constraintBottom_toBottomOf="@id/Notificaton"/>
+
+            <ImageButton
+                android:id="@+id/Notificaton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/notification"
+                android:background="whit"
+                app:layout_constraintTop_toTopOf="@id/KerjaYuk"
+                app:layout_constraintBottom_toBottomOf="@id/KerjaYuk"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/greetings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hi,Good Morning"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toBottomOf="@id/parentLayout"
+            app:layout_constraintBottom_toTopOf="@id/bannerProfile"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/bannerProfile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/banner"
+            android:padding="10dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@id/greetings"
+            app:layout_constraintBottom_toTopOf="@+id/activityText">
+
+            <ImageView
+                android:id="@+id/avatar"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/avatar" />
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tabay"
+                android:textSize="15dp"
+                android:fontFamily="@font/free_sans_bold"
+                android:textColor="@color/white"
+                android:layout_marginLeft="10dp"
+                app:layout_constraintStart_toEndOf="@id/avatar"/>
+
+            <TextView
+                android:id="@+id/position"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="UI/UX Designer"
+                android:textSize="10dp"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toStartOf="@id/name"
+                app:layout_constraintTop_toBottomOf="@+id/name"/>
+
+            <TextView
+                android:id="@+id/memberSince"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Member since:"
+                android:textSize="10dp"
+                android:textColor="@color/white"
+                android:layout_marginRight="10dp"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <TextView
+                android:id="@+id/memberDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="01 Juni 2021"
+                android:textColor="@color/white"
+                android:fontFamily="@font/free_sans_bold"
+                app:layout_constraintTop_toBottomOf="@+id/memberSince"
+                app:layout_constraintEnd_toEndOf="@id/memberSince" />
+
+            <TextView
+                android:id="@+id/locText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Location: "
+                android:textSize="10dp"
+                android:textColor="@color/white"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                app:layout_constraintStart_toStartOf="@id/avatar"
+                app:layout_constraintTop_toBottomOf="@+id/avatar"/>
+
+            <TextView
+                android:id="@+id/location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kantor Sahid"
+                android:textSize="15dp"
+                android:fontFamily="@font/free_sans_bold"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toStartOf="@id/locText"
+                app:layout_constraintTop_toBottomOf="@+id/locText"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/activityText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Today's activity"
+            android:textSize="15dp"
+            android:fontFamily="@font/free_sans_bold"
+            android:textColor="@color/black"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/bannerProfile"
+            app:layout_constraintBottom_toTopOf="@id/bannerActivity"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/bannerActivity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/activityText"
+            app:layout_constraintBottom_toTopOf="@id/newsText">
+
+            <LinearLayout
+                android:id="@+id/checkIn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginTop="20dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/workingHour">
+
+                <ImageView
+                    android:id="@+id/checkInLogo"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/check_in_hour" />
+
+                <TextView
+                    android:id="@+id/checkInTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="08:00"
+                    android:textSize="15dp"
+                    android:fontFamily="@font/free_sans_bold"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/checkInText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Check In"
+                    android:textColor="@color/black"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/workingHour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                app:layout_constraintTop_toTopOf="@id/checkIn"
+                app:layout_constraintStart_toEndOf="@id/checkIn"
+                app:layout_constraintEnd_toStartOf="@id/checkOut">
+
+                <ImageView
+                    android:id="@+id/hourLogo"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/hour" />
+
+                <TextView
+                    android:id="@+id/hourTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="03:00:00"
+                    android:textSize="15dp"
+                    android:fontFamily="@font/free_sans_bold"
+                    android:textColor="@color/primary" />
+
+                <TextView
+                    android:id="@+id/hourText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Working Hours"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/checkOut"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                app:layout_constraintTop_toTopOf="@id/checkIn"
+                app:layout_constraintStart_toEndOf="@id/workingHour"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <ImageView
+                    android:id="@+id/checkOutLogo"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/check_out_hour" />
+
+                <TextView
+                    android:id="@+id/checkOutTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="--:--"
+                    android:textSize="15dp"
+                    android:fontFamily="@font/free_sans_bold"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/checkOutText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Check Out"
+                    android:textColor="@color/black"/>
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/newsText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PCS News"
+            android:textSize="15dp"
+            android:fontFamily="@font/free_sans_bold"
+            android:textColor="@color/black"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            app:layout_constraintTop_toBottomOf="@id/bannerActivity"
+            app:layout_constraintBottom_toTopOf="@id/bannerNews"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/bannerNews"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:elevation="5dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/banner_shadow"
+            app:layout_constraintTop_toBottomOf="@+id/newsText"
+            app:layout_constraintBottom_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/authorAvatar"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/avatar"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <TextView
+                android:id="@+id/newsAuthor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ana Riswati"
+                android:layout_marginLeft="5dp"
+                android:textSize="15dp"
+                android:fontFamily="@font/free_sans_bold"
+                android:textColor="@color/primary_dark"
+                app:layout_constraintStart_toEndOf="@+id/authorAvatar"
+                app:layout_constraintTop_toTopOf="@id/authorAvatar"
+                app:layout_constraintBottom_toBottomOf="@+id/authorAvatar"/>
+
+            <TextView
+                android:id="@+id/newsDay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Senin"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/authorAvatar"
+                app:layout_constraintBottom_toTopOf="@id/newsDate"/>
+
+            <TextView
+                android:id="@+id/newsDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="30 Mei 2022"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/newsDay"
+                app:layout_constraintBottom_toBottomOf="@id/authorAvatar"/>
+
+            <TextView
+                android:id="@+id/text1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kalimat 1 - Lorem ipsum dolor sit amet consectetur"
+                android:textColor="@color/black"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/newsDate"/>
+
+            <TextView
+                android:id="@+id/text2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kalimat 2 - Lorem ipsum dolor sit amet consectetur"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text1"/>
+
+            <TextView
+                android:id="@+id/text3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kalimat 3 - Lorem ipsum dolor sit amet consectetur"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text2"/>
+
+            <TextView
+                android:id="@+id/text4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kalimat 4 - Lorem ipsum dolor sit amet consectetur"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text3"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/onlineText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Online"
+            android:textSize="15dp"
+            android:fontFamily="@font/free_sans_bold"
+            android:textColor="@color/black"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/bannerNews"
+            app:layout_constraintBottom_toTopOf="@+id/bannerOnline"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/bannerOnline"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:padding="10dp"
+            android:elevation="5dp"
+            android:background="@drawable/banner_shadow"
+            app:layout_constraintTop_toBottomOf="@+id/onlineText"
+            app:layout_constraintBottom_toBottomOf="parent" >
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:fadeScrollbars="true">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/friendProfile1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/friendProfile2"
+                        constrain>
+
+                        <ImageView
+                            android:id="@+id/friendAvatar1"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/avatar" />
+
+                        <TextView
+                            android:id="@+id/friendName1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Jefril"
+                            android:fontFamily="@font/free_sans_bold"
+                            android:textColor="@color/black"/>
+
+                        <TextView
+                            android:id="@+id/friendLocation1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Sahid"
+                            android:textColor="@color/black"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/friendProfile2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:elevation="1dp"
+                        app:layout_constraintStart_toEndOf="@id/friendProfile1"
+                        app:layout_constraintEnd_toStartOf="@id/friendProfile3">
+
+                        <ImageView
+                            android:id="@+id/friendAvatar2"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/avatar" />
+
+                        <TextView
+                            android:id="@+id/friendName2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Zasami"
+                            android:fontFamily="@font/free_sans_bold"
+                            android:textColor="@color/black"/>
+
+                        <TextView
+                            android:id="@+id/friendLocation2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="BSD"
+                            android:textColor="@color/black"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/friendProfile3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:elevation="2dp"
+                        app:layout_constraintStart_toEndOf="@id/friendProfile2"
+                        app:layout_constraintEnd_toStartOf="@id/friendProfile4">
+
+                        <ImageView
+                            android:id="@+id/friendAvatar3"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/avatar" />
+
+                        <TextView
+                            android:id="@+id/friendName3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Sam"
+                            android:fontFamily="@font/free_sans_bold"
+                            android:textColor="@color/black"/>
+
+                        <TextView
+                            android:id="@+id/friendLocation3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Sahid"
+                            android:textColor="@color/black"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/friendProfile4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:elevation="3dp"
+                        app:layout_constraintStart_toEndOf="@id/friendProfile3"
+                        app:layout_constraintEnd_toStartOf="@id/friendProfile5">
+
+                        <ImageView
+                            android:id="@+id/friendAvatar4"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/avatar" />
+
+                        <TextView
+                            android:id="@+id/friendName4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Aldo"
+                            android:fontFamily="@font/free_sans_bold"
+                            android:textColor="@color/black"/>
+
+                        <TextView
+                            android:id="@+id/friendLocation4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Sahid"
+                            android:textColor="@color/black"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/friendProfile5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:elevation="4dp"
+                        app:layout_constraintStart_toEndOf="@id/friendProfile4"
+                        app:layout_constraintEnd_toStartOf="@id/friendProfile6">
+
+                        <ImageView
+                            android:id="@+id/friendAvatar5"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/avatar" />
+
+                        <TextView
+                            android:id="@+id/friendName5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Erwin"
+                            android:fontFamily="@font/free_sans_bold"
+                            android:textColor="@color/black"/>
+
+                        <TextView
+                            android:id="@+id/friendLocation5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Sahid"
+                            android:textColor="@color/black"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/friendProfile6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        app:layout_constraintStart_toEndOf="@id/friendProfile5"
+                        app:layout_constraintEnd_toStartOf="@id/friendProfile7">
+
+                        <ImageView
+                            android:id="@+id/friendAvatar6"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/avatar" />
+
+                        <TextView
+                            android:id="@+id/friendName6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Arya"
+                            android:fontFamily="@font/free_sans_bold"
+                            android:textColor="@color/black"/>
+
+                        <TextView
+                            android:id="@+id/friendLocation6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="BSD"
+                            android:textColor="@color/black"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/friendProfile7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:elevation="4dp"
+                        app:layout_constraintStart_toEndOf="@id/friendProfile6"
+                        app:layout_constraintEnd_toStartOf="@id/friendProfile8">
+
+                        <ImageView
+                            android:id="@+id/friendAvatar7"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/avatar" />
+
+                        <TextView
+                            android:id="@+id/friendName7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Risya"
+                            android:fontFamily="@font/free_sans_bold"
+                            android:textColor="@color/black"/>
+
+                        <TextView
+                            android:id="@+id/friendLocation7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Sahid"
+                            android:textColor="@color/black"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/friendProfile8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:elevation="4dp"
+                        app:layout_constraintStart_toEndOf="@id/friendProfile7"
+                        app:layout_constraintEnd_toStartOf="@id/addFriendProfile">
+
+                        <ImageView
+                            android:id="@+id/friendAvatar8"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/avatar" />
+
+                        <TextView
+                            android:id="@+id/friendName8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Nesha"
+                            android:fontFamily="@font/free_sans_bold"
+                            android:textColor="@color/black"/>
+
+                        <TextView
+                            android:id="@+id/friendLocation8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Sahid"
+                            android:textColor="@color/black"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/addFriendProfile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:elevation="4dp"
+                        app:layout_constraintStart_toEndOf="@id/friendProfile8"
+                        app:layout_constraintEnd_toEndOf="parent">
+
+                        <ImageView
+                            android:id="@+id/friendAvatar9"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/avatar" />
+
+                        <TextView
+                            android:id="@+id/friendName9"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Jefril"
+                            android:fontFamily="@font/free_sans_bold"
+                            android:textColor="@color/black"/>
+
+                        <TextView
+                            android:id="@+id/friendLocation9"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Sahid"
+                            android:textColor="@color/black"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+<com.google.android.material.bottomappbar.BottomAppBar
+    android:id="@+id/bottomBar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom"
+    app:fabCradleMargin="10dp"
+    app:fabCradleRoundedCornerRadius="10dp"
+    app:fabCradleVerticalOffset="10dp">
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bottomBarView"
+        android:layout_marginRight="16dp"
+        app:menu="@menu/bottom_nav_menu"
+        android:background="@drawable/transparent_background"/>
+
+</com.google.android.material.bottomappbar.BottomAppBar>
+
+<com.google.android.material.floatingactionbutton.FloatingActionButton
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/fab"
+    android:src="@drawable/check_out"
+    app:layout_anchor="@id/bottomBarView" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

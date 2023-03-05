@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/topTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="10dp"
+        android:padding="10dp"
+        android:background="@drawable/banner_shadow">
+
+        <ImageButton
+            android:id="@+id/backButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_baseline_arrow_back_24"
+            android:background="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/notificationTitle"/>
+
+        <TextView
+            android:id="@+id/notificationTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Notification"
+            android:textSize="25dp"
+            android:fontFamily="@font/free_sans_bold"
+            android:textColor="@color/primary"
+            app:layout_constraintStart_toEndOf="@+id/backButton"
+            app:layout_constraintTop_toTopOf="@+id/backButton"
+            app:layout_constraintBottom_toBottomOf="@+id/backButton"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+<!--    Event 1     -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/event1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:background="@drawable/background_selected"
+        app:layout_constraintTop_toBottomOf="@+id/topTitle">
+
+        <ImageView
+            android:id="@+id/reimbursement1Logo"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:background="@drawable/banner"
+            android:src="@drawable/money"
+            app:tint="@color/white"
+            tools:layout_editor_absoluteX="10dp"
+            tools:layout_editor_absoluteY="10dp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="10dp"
+            app:layout_constraintStart_toEndOf="@id/reimbursement1Logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/reimbursement1Logo">
+
+            <TextView
+                android:id="@+id/reimbursement1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Reimbursement"
+                android:fontFamily="@font/free_sans_bold"
+                android:textColor="@color/black"
+                android:textSize="15dp"/>
+
+            <TextView
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:text="@string/event1" />
+
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+<!--    Event 2     -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/event2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/event1">
+
+        <ImageView
+            android:id="@+id/reimbursement2Logo"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:background="@drawable/banner"
+            android:src="@drawable/money_declined"
+            app:tint="@color/white"
+            tools:layout_editor_absoluteX="10dp"
+            tools:layout_editor_absoluteY="10dp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="10dp"
+            app:layout_constraintStart_toEndOf="@id/reimbursement2Logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/reimbursement2Logo">
+
+            <TextView
+                android:id="@+id/reimbursement2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Reimbursement"
+                android:fontFamily="@font/free_sans_bold"
+                android:textColor="@color/black"
+                android:textSize="15dp"/>
+
+            <TextView
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:text="@string/event2" />
+
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+<!--    Event 3     -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/event3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:background="@drawable/background_selected"
+        app:layout_constraintTop_toBottomOf="@+id/event2">
+
+        <ImageView
+            android:id="@+id/reimbursement3Logo"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:background="@drawable/banner"
+            android:src="@drawable/ic_baseline_money_24"
+            app:tint="@color/white"
+            tools:layout_editor_absoluteX="10dp"
+            tools:layout_editor_absoluteY="10dp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="10dp"
+            app:layout_constraintStart_toEndOf="@id/reimbursement3Logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/reimbursement3Logo">
+
+            <TextView
+                android:id="@+id/reimbursement3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Reimbursement"
+                android:fontFamily="@font/free_sans_bold"
+                android:textColor="@color/black"
+                android:textSize="15dp"/>
+
+            <TextView
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:text="@string/event3" />
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+<!--    Event 4     -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/event4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:background="@drawable/background_selected"
+        app:layout_constraintTop_toBottomOf="@+id/event3">
+
+        <ImageView
+            android:id="@+id/reimbursement4Logo"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:background="@drawable/banner"
+            android:src="@drawable/sick"
+            app:tint="@color/white"
+            tools:layout_editor_absoluteX="10dp"
+            tools:layout_editor_absoluteY="10dp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="10dp"
+            app:layout_constraintStart_toEndOf="@id/reimbursement4Logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/reimbursement4Logo">
+
+            <TextView
+                android:id="@+id/reimbursement4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sickness"
+                android:fontFamily="@font/free_sans_bold"
+                android:textColor="@color/black"
+                android:textSize="15dp"/>
+
+            <TextView
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:text="@string/event4" />
+
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+<!--    Event 5    -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/event5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/event4">
+
+        <ImageView
+            android:id="@+id/event5logo"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:background="@drawable/banner"
+            android:src="@drawable/sick"
+            app:tint="@color/white"
+            tools:layout_editor_absoluteX="10dp"
+            tools:layout_editor_absoluteY="10dp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="10dp"
+            app:layout_constraintStart_toEndOf="@id/event5logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/event5logo">
+
+            <TextView
+                android:id="@+id/sick5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sickness"
+                android:fontFamily="@font/free_sans_bold"
+                android:textColor="@color/black"
+                android:textSize="15dp"/>
+
+            <TextView
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:text="@string/event5" />
+
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+<!--    Event 6     -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/event6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:background="@drawable/background_selected"
+        app:layout_constraintTop_toBottomOf="@+id/event5">
+
+        <ImageView
+            android:id="@+id/event6logo"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:background="@drawable/banner"
+            android:src="@drawable/sick"
+            app:tint="@color/white"
+            tools:layout_editor_absoluteX="10dp"
+            tools:layout_editor_absoluteY="10dp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="10dp"
+            app:layout_constraintStart_toEndOf="@id/event6logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/event6logo">
+
+            <TextView
+                android:id="@+id/sick6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sickness"
+                android:fontFamily="@font/free_sans_bold"
+                android:textColor="@color/black"
+                android:textSize="15dp"/>
+
+            <TextView
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:text="@string/event6" />
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+<!--    Event 7     -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/event7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/event6">
+
+        <ImageView
+            android:id="@+id/event7logo"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:background="@drawable/banner"
+            android:src="@drawable/ot_approved"
+            app:tint="@color/white"
+            tools:layout_editor_absoluteX="10dp"
+            tools:layout_editor_absoluteY="10dp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="10dp"
+            app:layout_constraintStart_toEndOf="@id/event7logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/event7logo">
+
+            <TextView
+                android:id="@+id/ot7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Overtime"
+                android:fontFamily="@font/free_sans_bold"
+                android:textColor="@color/black"
+                android:textSize="15dp"/>
+
+            <TextView
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:text="@string/event6" />
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+<!--    Event 8     -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/event8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/event7">
+
+        <ImageView
+            android:id="@+id/event8logo"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:background="@drawable/banner"
+            android:src="@drawable/ot_declined"
+            app:tint="@color/white"
+            tools:layout_editor_absoluteX="10dp"
+            tools:layout_editor_absoluteY="10dp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="10dp"
+            app:layout_constraintStart_toEndOf="@id/event8logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/event8logo">
+
+            <TextView
+                android:id="@+id/sick8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Overtime"
+                android:fontFamily="@font/free_sans_bold"
+                android:textColor="@color/black"
+                android:textSize="15dp"/>
+
+            <TextView
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:text="@string/event6" />
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
